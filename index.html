@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>REMONTADA — Магазин одягу</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Шапка сайту --> 
+  <header class="header">
+    <div class="logo">STORE</div>
+    <nav class="menu">
+      <a href="#catalog">Каталог</a>
+       <a href="#vidguki">Відгуки</a>
+      <a href="#delivery">Доставка</a>
+    </nav>
+    <button class="btn-outline">Telegram</button>
+  </header>
+
+  <!-- Головний банер (Hero) -->
+  <section class="hero">
+    <h1>БАЗОВИЙ ОДЯГ НА КОЖЕН ДЕНЬ</h1>
+    <p>Худі, зіпки та футболки. Відправка Новою Поштою в день замовлення.</p>
+    <button class="btn-main">Дивитись каталог</button>
+  </section>
+
+<!-- Каталог товарів -->
+  <section id="catalog" class="catalog-section">
+    <h2>КАТАЛОГ</h2>
+
+    <div class="catalog-grid">
+      
+      <!-- Картка 1 -->
+      <div class="product-card">
+         <img src="images/hoodie.jpg" alt="Худі" class="product-img">
+        <h3>Худі Oversize Black</h3>
+        <p class="price">1 200 грн</p>
+        
+        <select class="size-select">
+          <option value="S">Розмір: S</option>
+          <option value="M" selected>Розмір: M</option>
+          <option value="L">Розмір: L</option>
+          <option value="XL">Розмір: XL</option>
+        </select>
+
+        <button class="btn-buy">Замовити</button>
+      </div>
+
+      <div class="product-card">
+         <img src="images/Pants.jpg" alt="Штани" class="product-img">
+        <h3>Штани WAIST</h3>
+        <p class="price">700 грн</p>
+        <select class="size-select">
+          <option value="S">Розмір: S</option>
+          <option value="M" selected>Розмір: M</option>
+          <option value="L">Розмір: L</option>
+          <option value="XL">Розмір: XL</option>
+        </select>
+
+        <button class="btn-buy">Замовити</button>
+      </div>
+
+      <!-- Картка 2 -->
+      <div class="product-card">
+       <img src="images/ziphoodie.jpg" alt="Зіп-худі" class="product-img">
+        <h3>Зіп-худі Grey</h3>
+        <p class="price">1 400 грн</p>
+        
+        <select class="size-select">
+          <option value="S">Розмір: S</option>
+          <option value="M" selected>Розмір: M</option>
+          <option value="L">Розмір: L</option>
+        </select>
+
+        <button class="btn-buy">Замовити</button>
+      </div>
+      <!-- Картка 3 -->
+
+       <div class="product-card">
+       <img src="images/jeans.jpg" alt="Фларед Джинси" class="product-img">
+        <h3>Flared jeans
+        <p class="price">1900 грн</p>
+
+            <select class="size-select">
+          <option value="S">Розмір: S</option>
+          <option value="M" selected>Розмір: M</option>
+          <option value="L">Розмір: L</option>
+        </select>
+
+        <button class="btn-buy">Замовити</button>
+      </div>
+        
+
+      <!-- Картка 4 -->
+      <div class="product-card">
+        <img src="images/tshirt.jpg" alt="" class="product-img">
+        <h3>Футболка indoorclo, чорна</h3>
+        <p class="price">820 грн</p>
+        
+        <select class="size-select">
+          <option value="M">Розмір: M</option>
+          <option value="L" selected>Розмір: L</option>
+          <option value="XL">Розмір: XL</option>
+        </select>
+
+        <button class="btn-buy">Замовити</button>
+      </div>
+      <!-- Модальне вікно оформлення замовлення -->
+  <div id="orderModal" class="modal-overlay" style="display: none;">
+    <div class="modal-box">
+      <button type="button" id="closeModal" class="modal-close">✕</button>
+      <h3>Оформлення замовлення</h3>
+     <div id="cartItemsList" class="cart-items-list"></div>
+      <p id="emptyCartHint" class="selected-product">Кошик порожній — додай хоча б одну річ.</p>
+
+      <form id="orderForm" class="order-form">
+        <input type="text" id="customerName" placeholder="Твоє ім'я" required>
+        <input type="text" id="customerContact" placeholder="Телефон або @username у Telegram" required>
+
+        <select id="paymentMethod">
+          <option value="Накладений платіж (Нова Пошта)">Накладений платіж (Нова Пошта)</option>
+          <option value="Передоплата на реквізити">Передоплата на реквізити</option>
+        </select>
+
+        <button type="submit" class="btn-buy">Підтвердити замовлення</button>
+      </form>
+
+      <p id="orderStatus" class="order-status"></p>
+    </div>
+  </div>
+  <button type="button" id="openCartBtn" class="cart-fab" style="display: none;">
+    Кошик (<span id="cartCount">0</span>)
+  </button>
+
+  <script src="script.js"></script>
+</body>   
+      <script src="script.js"></script>
+</body>
