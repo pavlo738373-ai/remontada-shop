@@ -1,6 +1,15 @@
 const BOT_TOKEN = "9191569091:AAEkmlW3ci4_nDcihUwLLutyVFWkavfVm7k";
 const CHAT_ID = "1192284548";
 document.addEventListener("DOMContentLoaded", () => {
+  const catalogBtn = document.querySelector(".btn-main");
+const catalogSection = document.getElementById("catalog");
+
+if (catalogBtn && catalogSection) {
+  catalogBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    catalogSection.scrollIntoView({ behavior: "smooth" });
+  });
+}
   const buyButtons = document.querySelectorAll(".btn-buy");
   const modal = document.getElementById("orderModal");
   const closeModalBtn = document.getElementById("closeModal");
